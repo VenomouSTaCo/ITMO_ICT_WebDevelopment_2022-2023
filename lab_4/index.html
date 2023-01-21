@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Лабораторная работа №4 - Konev Anton K33402</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Konev Anton K33402</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Лабораторные работы <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lab_1/" class="dropdown-item">Лабораторная работа №1</a>
+</li>
+                                    
+<li>
+    <a href="../lab_2/" class="dropdown-item">Лабораторная работа №2</a>
+</li>
+                                    
+<li>
+    <a href="../lab_3/" class="dropdown-item">Лабораторная работа №3</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Лабораторная работа №4</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Практические работы <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../prac_3.1/" class="dropdown-item">Практическая работа №3.1</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../lab_3/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../prac_3.1/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#4-vuejs" class="nav-link">Лабораторная работа 4. Реализация клиентской части средствами Vue.js.</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Описание работы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Основные файлы с кодом</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="4-vuejs">Лабораторная работа 4. Реализация клиентской части средствами Vue.js.</h1>
+<p><br></p>
+<h3 id="1"><strong>Вариант 1: сайт администратора отеля</strong></h3>
+<p><br></p>
+<h2 id="_1"><strong>Описание работы</strong></h2>
+<ul>
+<li>Настроить для серверной части, реализованной в лабораторной работе №3 CORS (Cross-origin resource sharing) в соответствии с Практической работой 4.3</li>
+<li>Утвердить с одним из преподавателей список интерфейсов для взаимодействия с серверной частью в соответствии с вашей предметной областью  </li>
+<li>Реализовать интерфейсы авторизации, регистрации и изменения учётных данных и настроить взаимодействие с серверной частью</li>
+<li>Реализовать клиентские интерфейсы и настроить взаимодействие с серверной частью (интерфейсы из пункта 4)</li>
+<li>Подключить vuetify или аналогичную библиотеку</li>
+<li>Реализовать документацию, описывающую работу разработанных интерфейсов средствами MkDocs.</li>
+</ul>
+<hr>
+
+<h2 id="_2"><strong>Основные файлы с кодом</strong></h2>
+<p><code>App.vue</code></p>
+<pre><code class="language-vue">&lt;script setup&gt;
+import {RouterLink, RouterView} from 'vue-router'
+import BaseLayout from &quot;@/layouts/BaseLayout.vue&quot;;
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;BaseLayout&gt;
+    &lt;RouterView/&gt;
+  &lt;/BaseLayout&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre>
+<p><code>main.js</code></p>
+<pre><code class="language-javascript">import {createApp} from 'vue'
+import icons from '@/components/icons'
+
+import App from '@/App.vue'
+import router from '@/router'
+import store from &quot;@/stores&quot;;
+import components from '@/components/my-components'
+
+import './assets/main.css'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/vue-fontawesome'
+import {FontAwesomeIcon} from &quot;@fortawesome/vue-fontawesome&quot;;
+import {library} from &quot;@fortawesome/fontawesome-svg-core&quot;;
+
+
+const app = createApp(App)
+
+components.forEach(component =&gt; {
+    app.component(component.name, component)
+})
+
+icons.forEach(icon =&gt; {
+    library.add(icon)
+})
+
+app.component('font-awesome-icon', FontAwesomeIcon)
+
+app.use(store)
+app.use(router)
+
+app.mount('#app')
+</code></pre>
+<h3 id="api">API</h3>
+<p><code>instance.js</code></p>
+<pre><code class="language-javascript">import axios from &quot;axios&quot;;
+
+const apiURL = 'http://localhost:8000'
+
+const instance = axios.create({
+    baseURL: apiURL
+})
+
+export default instance
+</code></pre>
+<p><code>index.js</code></p>
+<pre><code class="language-javascript">import instance from &quot;@/api/instance.js&quot;;
+import RoomAPI from &quot;@/api/rooms&quot;;
+import UsersAPI from &quot;@/api/users&quot;;
+import GuestsAPI from &quot;@/api/guests&quot;;
+
+const roomAPI = new RoomAPI(instance);
+const userAPI = new UsersAPI(instance);
+const guestsAPI = new GuestsAPI(instance);
+
+export {
+    roomAPI,
+    userAPI,
+    guestsAPI
+}
+</code></pre>
+<p><code>users.js</code></p>
+<pre><code class="language-javascript">class UsersAPI {
+    constructor(instance) {
+        this.API = instance
+    }
+
+    createNewUser = async (data) =&gt; {
+        return this.API({
+            method: 'POST',
+            url: '/auth/users/',
+            data,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+
+    login = async (data) =&gt; {
+        return this.API({
+            method: 'POST',
+            url: '/auth/token/login/',
+            data,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    }
+
+    logout = async (token) =&gt; {
+        return this.API({
+            method: 'POST',
+            url: '/auth/token/logout/',
+            headers: {
+                'Authorization': `Token ${token}`
+            }
+        })
+    }
+
+    fetchCurrentUserInfo = async (token) =&gt; {
+        return this.API({
+            url: '/auth/users/me/',
+            headers: {
+                'Authorization': `Token ${token}`
+            }
+        })
+    }
+
+    getAdminById = async (id, token) =&gt; {
+        return this.API({
+            url: `/auth/users/${id}/`,
+            headers: {
+                'Authorization': `Token ${token}`
+            }
+        })
+    }
+}
+
+export default UsersAPI
+</code></pre>
+<p><code>guests.js</code></p>
+<pre><code class="language-javascript">class GuestsAPI {
+    constructor(instance) {
+        this.API = instance
+    }
+
+    getAllGuests = async () =&gt; {
+        return this.API({
+            url: '/hotels/guests'
+        })
+    }
+
+    getGuestById = async (id) =&gt; {
+        return this.API({
+            url: `/hotels/guests/${id}`
+        })
+    }
+
+    addBooking = async (data, token) =&gt; {
+        return this.API({
+            method: 'POST',
+            url: '/hotels/booking',
+            data,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Token ${token}`
+            }
+        })
+    }
+
+    closeBooking = async (id) =&gt; {
+        return this.API({
+            method: 'POST',
+            url: `/hotels/check_out_booking/${id}`
+        })
+    }
+}
+
+export default GuestsAPI
+</code></pre>
+<h3 id="stores">Stores</h3>
+<p><code>index.js</code></p>
+<pre><code class="language-javascript">import { persist } from 'pinia-persists'
+import { createPinia } from 'pinia'
+
+const pinia = createPinia()
+
+pinia.use(persist())
+
+export default pinia
+</code></pre>
+<p><code>rooms.js</code></p>
+<pre><code class="language-javascript">import {defineStore} from &quot;pinia&quot;;
+import {roomAPI} from &quot;@/api&quot;;
+
+const useRoomsStore = defineStore('rooms', {
+    state: () =&gt; ({
+        rooms: []
+    }),
+    actions: {
+        async loadAllRooms() {
+            const response = await roomAPI.getRooms();
+            this.rooms = response.data;
+            return response.data
+        },
+
+        async loadFreeRooms() {
+            const response = await roomAPI.getFreeRooms();
+            return response.data
+        },
+    }
+
+})
+
+export default useRoomsStore
+</code></pre>
+<p><code>users.js</code></p>
+<pre><code class="language-javascript">import {defineStore} from &quot;pinia&quot;;
+import {userAPI} from &quot;@/api&quot;;
+
+const useUsersStore = defineStore('users', {
+    state: () =&gt; ({
+        user: {},
+        token: null,
+    }),
+    actions: {
+        async signUp(user) {
+            const response = await userAPI.createNewUser(user);
+            return response.data;
+        },
+
+        async onLogin(credentials) {
+            const response = await userAPI.login(credentials)
+            this.user = {username: credentials.username, password: credentials.password}
+            this.token = response.data.auth_token
+            return response
+        },
+
+        async fetchUser() {
+            if (this.token) {
+                const response = await userAPI.fetchCurrentUserInfo(this.token)
+                return response.data
+            }
+        },
+
+        async onLogout() {
+            if (this.token) {
+                const response = await userAPI.logout(this.token)
+                this.token = null;
+                this.user = {}
+                return response.data
+            }
+        },
+
+        async getAdmin(id) {
+            if (this.token) {
+                const response = await userAPI.getAdminById(id, this.token)
+                return response.data
+            }
+        }
+    }
+
+})
+
+export default useUsersStore
+</code></pre>
+<h3 id="router">Router</h3>
+<p><code>index.js</code></p>
+<pre><code class="language-javascript">import {createRouter, createWebHistory} from 'vue-router'
+import AllRoomsView from &quot;@/views/AllRoomsView.vue&quot;;
+import RoomView from &quot;@/views/RoomView.vue&quot;;
+import AllGuestsView from &quot;@/views/AllGuestsView.vue&quot;;
+import ReportView from &quot;@/views/ReportView.vue&quot;;
+import GuestView from &quot;@/views/GuestView.vue&quot;;
+
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
+        {
+            path: '/',
+            name: 'rooms',
+            component: AllRoomsView
+        },
+        {
+            path: '/room/:id',
+            name: 'room',
+            props: true,
+            component: RoomView
+        },
+        {
+            path: '/guests',
+            name: 'guests',
+            component: AllGuestsView
+        },
+        {
+            path: '/guest/:id',
+            name: 'guest',
+            props: true,
+            component: GuestView
+        },
+        {
+            path: '/report',
+            name: 'report',
+            component: ReportView
+        },
+    ]
+})
+
+export default router
+</code></pre>
+<h3 id="components">Components</h3>
+<p><code>Header.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-dark&quot;&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+      &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;mynavbar&quot;&gt;
+        &lt;ul class=&quot;navbar-nav me-auto&quot;&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;RouterLink class=&quot;nav-link&quot; to=&quot;/&quot;&gt;Комнаты&lt;/RouterLink&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;RouterLink class=&quot;nav-link&quot; to=&quot;/guests&quot;&gt;Гости&lt;/RouterLink&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;RouterLink class=&quot;nav-link&quot; to=&quot;/report&quot;&gt;Отчет&lt;/RouterLink&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;button class=&quot;btn btn-warning&quot; type=&quot;button&quot; @click=&quot;showModal=true&quot; v-if=&quot;!token&quot;&gt;Войти&lt;/button&gt;
+        &lt;div class=&quot;logged d-flex align-items-center&quot; v-if=&quot;token&quot;&gt;
+          &lt;p class=&quot;username me-4 p-2 m-0&quot;&gt;{{ user.username }}&lt;/p&gt;
+          &lt;button class=&quot;btn btn-danger&quot; @click=&quot;logout&quot;&gt;Выйти&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+  &lt;Login v-show=&quot;showModal&quot; @close-modal=&quot;showModal = false&quot; @show-register=&quot;[showModal=false, showRegister=true]&quot;/&gt;
+  &lt;Register v-show=&quot;showRegister&quot; @close-register=&quot;showRegister=false&quot;
+            @show-modal=&quot;[showRegister=false, showModal=true]&quot;/&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Login from &quot;@/components/modal/Login.vue&quot;;
+import Register from &quot;@/components/modal/Register.vue&quot;;
+import {mapActions, mapState} from &quot;pinia&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+
+export default {
+  name: 'Header',
+  components: {
+    Login,
+    Register
+  },
+  data() {
+    return {
+      showModal: false,
+      showRegister: false,
+    }
+  },
+  methods: {
+    ...mapActions(useUsersStore, [&quot;onLogout&quot;]),
+
+    async logout() {
+      if (confirm(&quot;Вы действительно хотите выйти?&quot;)) {
+        await this.onLogout()
+        window.location.reload()
+      }
+    }
+
+  },
+  computed: {
+    ...mapState(useUsersStore, [&quot;user&quot;]),
+    ...mapState(useUsersStore, ['token'])
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.username {
+  color: white;
+}
+&lt;/style&gt;
+</code></pre>
+<p><code>Report.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;report-wrapper d-flex justify-content-start mt-4 p-4&quot;&gt;
+    &lt;div class=&quot;report-header&quot;&gt;
+      &lt;h3&gt;Выберите квартал&lt;/h3&gt;
+      &lt;form type=&quot;submit&quot; class=&quot;mt-4&quot; @submit.prevent=&quot;generateReport&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;quarter&quot; :value=&quot;1&quot; v-model=&quot;selectedValue&quot;&gt;
+        &lt;label&gt;1-й (Январь-Март)&lt;/label&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;quarter&quot; :value=&quot;2&quot; v-model=&quot;selectedValue&quot;&gt;
+        &lt;label&gt;2-й (Апрель-Июнь)&lt;/label&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;quarter&quot; :value=&quot;3&quot; v-model=&quot;selectedValue&quot;&gt;
+        &lt;label&gt;3-й (Июль-Сентябрь)&lt;/label&gt;
+        &lt;br&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;quarter&quot; :value=&quot;4&quot; v-model=&quot;selectedValue&quot;&gt;
+        &lt;label&gt;4-й (Октрябрь-Декабрь)&lt;/label&gt;
+        &lt;br&gt;
+        &lt;button class=&quot;btn btn-success mt-3&quot; type=&quot;submit&quot;&gt;Сгенерировать&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;report-body&quot; v-if=&quot;report&quot;&gt;
+      &lt;h3&gt;Отчет за {{ selectedValue }}-й квартал&lt;/h3&gt;
+      &lt;h4&gt;Комнаты:&lt;/h4&gt;
+      &lt;table&gt;
+        &lt;tr class=&quot;&quot;&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;25%&quot;&gt;Номер&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;50%&quot;&gt;Бронирования&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;25%&quot;&gt;Профит&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr v-for=&quot;room in report.rooms&quot;&gt;
+          &lt;td&gt;{{ room.number }}&lt;/td&gt;
+          &lt;td&gt;{{ room.count }}&lt;/td&gt;
+          &lt;td&gt;₽ {{ room.profit }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;h4&gt;Этажи:&lt;/h4&gt;
+      &lt;table&gt;
+        &lt;tr class=&quot;&quot;&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;50%&quot;&gt;Этаж&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;50%&quot;&gt;Кол-во комнат&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr v-for=&quot;floor in report.floors&quot;&gt;
+          &lt;td&gt;{{ floor.floor }}&lt;/td&gt;
+          &lt;td&gt;{{ floor.count }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;h4&gt;
+        Общий профит:
+      &lt;/h4&gt;
+      &lt;h5&gt;₽ {{ report.profit }}&lt;/h5&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from &quot;axios&quot;;
+
+export default {
+  name: 'report',
+  data() {
+    return {
+      selectedValue: null,
+      report: null
+    }
+  },
+  methods: {
+    async generateReport() {
+      if (this.selectedValue &lt; 2) {
+        this.report = (await axios.get(`http://localhost:8000/hotels/report/${this.selectedValue}`)).data
+      } else {
+        this.report = null
+        alert('Пока отчет не доступен')
+      }
+    }
+  },
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.report-header {
+  margin-right: 300px;
+}
+
+input {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+h4 {
+  margin-top: 30px;
+}
+&lt;/style&gt;
+</code></pre>
+<p><code>Rooms.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;content &quot;&gt;
+    &lt;div class=&quot;mb-2 d-flex justify-content-between align-items-center&quot;&gt;
+
+      &lt;div class=&quot;position-relative&quot;&gt;
+        &lt;custom-input v-model=&quot;searchQuery&quot; @send-search=&quot;findRoom&quot;&gt;&lt;/custom-input&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;px-2&quot;&gt;
+        &lt;select-list
+            style=&quot;width: 120px&quot;
+            class=&quot;mx-5 border-0&quot;
+            v-model=&quot;sortName&quot;
+            :options=&quot;sortOptions&quot;
+        &gt;
+        &lt;/select-list&gt;
+        &lt;filters-list
+            style=&quot;width: 100px&quot;
+            class=&quot; border-0&quot;
+            v-model=&quot;filterName&quot;
+            :options=&quot;filterOptions&quot;
+        &gt;
+        &lt;/filters-list&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;table-responsive&quot;&gt;
+      &lt;table class=&quot;table table-responsive table-borderless&quot;&gt;
+
+        &lt;thead&gt;
+        &lt;tr class=&quot;bg-light&quot;&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;10%&quot;&gt;№ комнаты&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;15%&quot;&gt;Этаж&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;15%&quot;&gt;Тип&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;20%&quot;&gt;Телефон&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; class=&quot;text-start&quot; width=&quot;15%&quot;&gt;&lt;span&gt;Цена/день&lt;/span&gt;&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; width=&quot;20%&quot;&gt;Статус&lt;/th&gt;
+          &lt;th scope=&quot;col&quot; class=&quot;text-end&quot; width=&quot;15%&quot;&gt;Подробнее...&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody v-for=&quot;room in rooms&quot;&gt;
+        &lt;tr class=&quot;&quot;&gt;
+          &lt;td&gt;{{ room.number }}&lt;/td&gt;
+          &lt;td&gt;{{ room.floor }}&lt;/td&gt;
+          &lt;td&gt;{{ room.room_type }}&lt;/td&gt;
+          &lt;td&gt;{{ room.phone }}&lt;/td&gt;
+          &lt;td class=&quot;text-start&quot;&gt;&lt;span class=&quot;fw-bolder&quot;&gt;₽ {{ parseFloat(room.price).toFixed(2) }}&lt;/span&gt;&lt;/td&gt;
+          &lt;td class=&quot;fw-bold&quot; :class=&quot;[room.is_free ? 'text-success' : 'text-danger']&quot;&gt;
+            {{ room.is_free ? 'Свободно' : 'Занято' }}
+          &lt;/td&gt;
+          &lt;td class=&quot;text-end&quot;&gt;
+            &lt;button class=&quot;btn btn-info&quot; @click=&quot;openRoom(room.id)&quot;&gt;Детали&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import {mapActions} from &quot;pinia&quot;;
+import useRoomsStore from &quot;@/stores/rooms&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+import FiltersList from &quot;@/components/my-components/FiltersList.vue&quot;;
+import Guest from &quot;@/components/modal/newGuest.vue&quot;;
+
+
+export default {
+  name: 'Rooms',
+  components: {Guest},
+  data() {
+    return {
+      rooms: [],
+      searchQuery: '',
+      sortName: '',
+      filterName: '',
+      filterOptions: [
+        {value: 'ANY', name: 'Любой'},
+        {value: 'TRIPLE', name: 'TRIPLE'},
+        {value: 'DOUBLE', name: 'DOUBLE'},
+        {value: 'SINGLE', name: 'SINGLE'},
+      ],
+      sortOptions: [
+        {value: 'default', name: 'Default'},
+        {value: 'number ASC', name: 'По номеру (ASC)'},
+        {value: 'number DESC', name: 'По номеру (DESC)'},
+        {value: 'floor ASC', name: 'По этажу (ASC)'},
+        {value: 'floor DESC', name: 'По этажу (DESC)'},
+        {value: 'price ASC', name: 'По цене (ASC)'},
+        {value: 'price DESC', name: 'По цене (DESC)'},
+      ],
+    }
+  },
+  methods: {
+    ...mapActions(useRoomsStore, ['loadAllRooms']),
+    ...mapActions(useUsersStore, ['fetchUser']),
+
+    async getRooms() {
+      this.rooms = await this.loadAllRooms();
+      // console.log(this.rooms)
+    },
+
+    openRoom(roomId) {
+      this.$router.push({name: 'room', params: {id: roomId}})
+    },
+
+    async findRoom() {
+      if (this.searchQuery == '') {
+        this.rooms = await this.loadAllRooms();
+      } else {
+        this.rooms = this.rooms.filter(room =&gt; room.number.includes(this.searchQuery))
+      }
+    },
+
+  },
+  mounted() {
+    this.getRooms()
+    this.fetchUser()
+
+  },
+  watch: {
+    async sortName(sortName) {
+      if (sortName == 'default') {
+        this.rooms = await this.loadAllRooms()
+      } else {
+        const sortSplit = sortName.split(' ')
+        const type = sortSplit[0]
+        const order = sortSplit[1]
+        this.rooms.sort((a, b) =&gt; a[type] - b[type])
+        if (order === 'DESC') {
+          this.rooms.reverse()
+        }
+      }
+    },
+
+    async filterName(filterName) {
+      this.rooms = await this.loadAllRooms()
+      if (filterName !== 'ANY') {
+
+        this.rooms = this.rooms.filter(room =&gt; room.room_type == filterName)
+      } else {
+        this.rooms = await this.loadAllRooms()
+      }
+
+    },
+
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.content {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.dropdown-input label {
+  display: block;
+  padding: 3px 20px 0 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+
+&lt;/style&gt;
+</code></pre>
+<p><code>Room.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;room-wrapper mt-4 p-3&quot;&gt;
+    &lt;h1&gt;Комната № {{ room.number }}
+    &lt;/h1&gt;
+    &lt;div class=&quot;d-flex justify-content-between mt-4 status-wrapper&quot;&gt;
+      &lt;h3 class=&quot;fw-bold&quot;&gt;Статус:
+        &lt;span :class=&quot;[room.is_free ? 'text-success' : 'text-danger']&quot;&gt;{{ room.is_free ? 'Свободно' : 'Занято' }}&lt;/span&gt;
+      &lt;/h3&gt;
+      &lt;button v-if=&quot;room.is_free&quot; class=&quot;btn btn-toggle btn-primary&quot; @click=&quot;isVisible = true&quot;
+              :class=&quot;[room.is_free ? 'btn-primary' : 'btn-danger']&quot;&gt;
+        {{ 'Заселить' }}
+      &lt;/button&gt;
+      &lt;button v-if=&quot;!room.is_free&quot; class=&quot;btn btn-toggle btn-danger&quot; @click=&quot;checkOut&quot;&gt;
+        {{ 'Выселить' }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;room-body mt-3&quot;&gt;
+      &lt;p&gt;Тип: &lt;strong&gt;{{ room.room_type }}&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;Этаж: &lt;strong&gt;{{ room.floor }}&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;Номер телефона: &lt;strong&gt;{{ room.phone }}&lt;/strong&gt;&lt;/p&gt;
+      &lt;p class=&quot;mb-5&quot;&gt;Цена/день: &lt;strong&gt;₽ {{ parseFloat(room.price).toFixed(2) }}&lt;/strong&gt;&lt;/p&gt;
+      &lt;h3&gt;История бронирований&lt;/h3&gt;
+      &lt;div class=&quot;history-wrapper mb-5&quot;&gt;
+        &lt;div v-for=&quot;booking in room.bookings&quot; class=&quot;mb-4&quot;&gt;
+          &lt;h5&gt;{{ booking.guest.last_name }} {{ booking.guest.first_name }} {{ booking.guest.middle_name }}&lt;/h5&gt;
+          &lt;p&gt;
+            &lt;span&gt;&lt;b&gt;Номер паспорта:&lt;/b&gt; {{ booking.guest.passport }}&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;&lt;b&gt;Город:&lt;/b&gt; {{ booking.guest.city }}&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;&lt;b&gt;Дата заезда:&lt;/b&gt; {{ dateParser(booking.check_in) }}&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;&lt;b&gt;Дата выезда:&lt;/b&gt; {{ dateParser(booking.check_out) }}&lt;/span&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn btn-secondary&quot; @click=&quot;getBack&quot;&gt;Назад&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;CheckIn v-show=&quot;isVisible&quot; @close-modal=&quot;isVisible = false&quot;
+           :room=&quot;[room.id, JSON.parse(JSON.stringify(free_time))]&quot;/&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import {mapActions, mapState} from &quot;pinia&quot;;
+import useRoomsStore from &quot;@/stores/rooms&quot;;
+import CheckIn from &quot;@/components/modal/CheckIn.vue&quot;;
+import useGuestsStore from &quot;@/stores/guests&quot;;
+
+export default {
+  components: {
+    CheckIn
+  },
+  props: {
+    id: String
+  },
+  data() {
+    return {
+      room: {},
+      isVisible: false,
+      free_time: null
+    }
+  },
+  methods: {
+    ...mapActions(useRoomsStore, ['loadAllRooms', &quot;loadFreeRooms&quot;]),
+    ...mapActions(useGuestsStore, ['getGuestsList', &quot;sendClosed&quot;]),
+    async getSelectedRoom() {
+      const rooms = await this.loadAllRooms()
+      for (let i = 0; i &lt; rooms.length; i++) {
+        if (rooms[i].id === parseInt(this.id)) {
+          this.room = rooms[i]
+          break
+        }
+      }
+    },
+    async getFreeRange() {
+      let free = await this.loadFreeRooms()
+      free = free.filter(room =&gt; room.id == this.id)
+      this.free_time = free[0].free_time[0]
+    },
+    dateParser(string) {
+      let date = new Date(string)
+      return date.toUTCString()
+    },
+    getBack() {
+      this.$router.push('/')
+    },
+    async checkOut() {
+      if (confirm('Вы действительно хотите выселить гостя?')) {
+        await this.sendClosed(this.room.curr_booking)
+        window.location.reload()
+      }
+      //
+    }
+  },
+
+  mounted() {
+    this.getSelectedRoom()
+    this.getFreeRange()
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+p {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.history-wrapper {
+  margin-top: 30px;
+  height: 200px;
+  width: 400px;
+  display: block;
+  overflow-y: scroll;
+}
+
+.status-wrapper {
+  width: 400px;
+}
+&lt;/style&gt;
+</code></pre>
+<h3 id="modals">Modals</h3>
+<p><code>Register.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;transition name=&quot;modal&quot;&gt;
+    &lt;div class=&quot;modal-mask&quot; @click=&quot;$emit('close-register')&quot;&gt;
+      &lt;div v-if=&quot;showSuccess&quot; class=&quot;alert alert-success d-flex justify-content-center align-text-top fw-bold&quot;&gt;
+        Вы успешно прошли регистрацию! Теперь надо войти в аккаунт
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-wrapper&quot;&gt;
+        &lt;div class=&quot;modal-container&quot; @click.stop&gt;
+          &lt;form type=&quot;submit&quot; @submit.prevent=&quot;onRegSubmit&quot;&gt;
+            &lt;h1&gt;Регистрация&lt;/h1&gt;
+            &lt;div class=&quot;form-outline mb-4&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form1Example1&quot;&gt;Имя пользователя*&lt;/label&gt;
+              &lt;input type=&quot;text&quot; id=&quot;form1Example1&quot; class=&quot;form-control&quot; v-model.trim=&quot;user.username&quot; required
+                     autocomplete=&quot;off&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-outline mb-4&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form2Example2&quot;&gt;Email*&lt;/label&gt;
+              &lt;input type=&quot;email&quot; id=&quot;form2Example2&quot; class=&quot;form-control&quot; v-model.trim=&quot;user.email&quot; required
+                     autocomplete=&quot;off&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-outline mb-4&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form3Example3&quot;&gt;Пароль*&lt;/label&gt;
+              &lt;input type=&quot;password&quot; id=&quot;form3Example3&quot; class=&quot;form-control&quot; v-model.trim=&quot;user.password&quot; required
+                     autocomplete=&quot;off&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-outline mb-5&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form4Example4&quot;&gt;Повторите пароль*&lt;/label&gt;
+              &lt;input type=&quot;password&quot; id=&quot;form4Example4&quot; class=&quot;form-control&quot; required autocomplete=&quot;off&quot;/&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-grid gap-2&quot;&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block p-2 mb-4 fw-semibold&quot;&gt;Регистрация&lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+              &lt;p class=&quot;text mx-2&quot;&gt;Уже есть аккаунт?&lt;/p&gt;
+              &lt;a class=&quot;link-primary fw-semibold&quot; href=&quot;#&quot; @click=&quot;$emit('show-modal')&quot;&gt;Войти&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/transition&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import {mapActions} from &quot;pinia&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+
+export default {
+  name: 'Register',
+  data() {
+    return {
+      user: {
+        username: '',
+        password: '',
+        email: '',
+        is_admin: true
+      },
+      showSuccess: false
+    }
+  },
+  methods: {
+    ...mapActions(useUsersStore, ['signUp']),
+
+    async onRegSubmit() {
+      await this.signUp(this.user)
+
+      this.showSuccess = true;
+      setTimeout(() =&gt; {
+        this.showSuccess = false;
+        this.$emit('show-modal')
+      }, 4000)
+    }
+  }
+
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 35%;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.alert {
+  position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  height: 60px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition=&quot;modal&quot; when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+&lt;/style&gt;
+</code></pre>
+<p><code>Login.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;transition name=&quot;modal&quot;&gt;
+    &lt;div class=&quot;modal-mask&quot; @click=&quot;$emit('close-modal')&quot;&gt;
+      &lt;div class=&quot;modal-wrapper&quot;&gt;
+        &lt;div class=&quot;modal-container&quot; @click.stop&gt;
+          &lt;form type=&quot;submit&quot; @submit.prevent=&quot;onLogSubmit&quot;&gt;
+            &lt;h1&gt;Войти в аккаунт&lt;/h1&gt;
+            &lt;div class=&quot;form-outline mb-4&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form1&quot;&gt;Логин*&lt;/label&gt;
+              &lt;input type=&quot;text&quot;
+                     id=&quot;form1&quot;
+                     class=&quot;form-control&quot;
+                     required
+                     autocomplete=&quot;off&quot;
+                     v-model=&quot;user.username&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-outline mb-5&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;form2&quot;&gt;Пароль*&lt;/label&gt;
+              &lt;input type=&quot;password&quot;
+                     id=&quot;form2&quot;
+                     class=&quot;form-control&quot;
+                     v-model=&quot;user.password&quot;
+                     required
+                     autocomplete=&quot;off&quot;/&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-grid gap-2&quot;&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block p-2 mb-4 fw-semibold&quot;
+                      @click=&quot;$emit('close-modal')&quot;&gt;Войти
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+              &lt;p class=&quot;text mx-2&quot;&gt;Нет аккаунта?&lt;/p&gt;
+              &lt;a class=&quot;link-primary fw-semibold&quot; href=&quot;#&quot; @click=&quot;$emit('show-register')&quot;&gt;Регистрация&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/transition&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+import {mapActions} from &quot;pinia&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+
+export default {
+  name: 'Login',
+  data() {
+    return {
+      user: {
+        username: '',
+        password: '',
+      },
+
+    }
+  },
+  methods: {
+    ...mapActions(useUsersStore, ['onLogin']),
+
+    async onLogSubmit() {
+      await this.onLogin(this.user)
+
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 35%;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition=&quot;modal&quot; when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+&lt;/style&gt;
+</code></pre>
+<p><code>newGuest.vue</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;transition name=&quot;modal&quot;&gt;
+    &lt;div class=&quot;modal-mask&quot; @click=&quot;$emit('close-modal')&quot;&gt;
+      &lt;div v-if=&quot;showSuccess&quot; class=&quot;alert alert-success d-flex justify-content-center align-text-top fw-bold&quot;&gt;
+        Вы успешно создали пользователя!
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-wrapper&quot;&gt;
+        &lt;div class=&quot;modal-container&quot; @click.stop&gt;
+          &lt;form type=&quot;submit&quot; @submit.prevent=&quot;onCreateSubmit&quot;&gt;
+            &lt;h1&gt;Добавление гостя&lt;/h1&gt;
+            &lt;div class=&quot;d-flex&quot;&gt;
+              &lt;div class=&quot;w-50&quot;&gt;
+                &lt;div class=&quot;form-outline mb-3 w-75&quot;&gt;
+                  &lt;label class=&quot;form-label&quot; for=&quot;form12&quot;&gt;Фамилия*&lt;/label&gt;
+                  &lt;input type=&quot;text&quot;
+                         id=&quot;form12&quot;
+                         class=&quot;form-control&quot;
+                         required
+                         v-model=&quot;guest.last_name&quot;
+                         autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-outline mb-3 w-75&quot;&gt;
+                  &lt;label class=&quot;form-label&quot; for=&quot;form22&quot;&gt;Имя*&lt;/label&gt;
+                  &lt;input type=&quot;text&quot;
+                         id=&quot;form22&quot;
+                         class=&quot;form-control&quot;
+                         required
+                         v-model=&quot;guest.first_name&quot;
+                         autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-outline mb-5 w-75&quot;&gt;
+                  &lt;label class=&quot;form-label&quot; for=&quot;form32&quot;&gt;Отчество*&lt;/label&gt;
+                  &lt;input type=&quot;text&quot;
+                         id=&quot;form32&quot;
+                         class=&quot;form-control&quot;
+                         required
+                         v-model=&quot;guest.middle_name&quot;
+                         autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;w-50&quot;&gt;
+                &lt;div class=&quot;form-outline mb-3 w-75&quot;&gt;
+                  &lt;label class=&quot;form-label&quot; for=&quot;form42&quot;&gt;Паспорт*&lt;/label&gt;
+                  &lt;input type=&quot;text&quot;
+                         id=&quot;form42&quot;
+                         class=&quot;form-control&quot;
+                         required
+                         v-model=&quot;guest.passport&quot;
+                         autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-outline mb-3 w-75&quot;&gt;
+                  &lt;label class=&quot;form-label&quot; for=&quot;form52&quot;&gt;Город*&lt;/label&gt;
+                  &lt;input type=&quot;text&quot;
+                         id=&quot;form52&quot;
+                         class=&quot;form-control&quot;
+                         required
+                         v-model=&quot;guest.city&quot;
+                         autocomplete=&quot;off&quot;/&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-grid gap-2&quot;&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block p-2 mb-3 fw-semibold&quot;&gt;Создать&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/transition&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import {mapActions} from &quot;pinia&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+import useGuestsStore from &quot;@/stores/guests&quot;;
+
+export default {
+  name: 'newGuest',
+  data() {
+    return {
+      guest: {
+        username: '',
+        password: '',
+        first_name: '',
+        last_name: '',
+        middle_name: '',
+        city: '',
+        passport: ''
+      },
+      showSuccess: false
+    }
+  },
+  methods: {
+    ...mapActions(useGuestsStore, ['sendBooking']),
+    ...mapActions(useUsersStore, [&quot;signUp&quot;]),
+
+    async onCreateSubmit() {
+      this.guest.username = this.guest.first_name
+      this.guest.password = this.guest.first_name + this.guest.passport
+      await this.signUp(this.guest)
+
+      this.showSuccess = true;
+      setTimeout(() =&gt; {
+        this.showSuccess = false;
+        this.$emit('sclose-modal')
+        window.location.reload()
+      }, 4000)
+
+    }
+  }
+
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 60%;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.alert {
+  position: absolute;
+  margin-top: 30px;
+  width: 100%;
+  height: 60px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition=&quot;modal&quot; when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+&lt;/style&gt;
+</code></pre>
+<p><code>CheckIn</code></p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;transition name=&quot;modal&quot;&gt;
+    &lt;div class=&quot;modal-mask&quot; @click=&quot;$emit('close-modal')&quot; @mouseenter=&quot;getFreeRoom&quot;&gt;
+      &lt;div class=&quot;modal-wrapper&quot;&gt;
+        &lt;div class=&quot;modal-container&quot; @click.stop&gt;
+          &lt;form type=&quot;submit&quot; @submit.prevent=&quot;sendForm&quot;&gt;
+            &lt;span class=&quot;&quot;&gt;&lt;b&gt;Выберите гостя&lt;/b&gt;&lt;/span&gt;
+            &lt;div style=&quot;height: 70px; overflow-y: scroll; margin-bottom: 30px&quot;&gt;
+              &lt;div v-for=&quot;guest in freeGuests&quot; class=&quot;my-2&quot;&gt;
+                &lt;input type=&quot;radio&quot;
+                       class=&quot;choice&quot;
+                       name=&quot;radButton&quot;
+                       :value=&quot;guest.id&quot;
+                       v-model=&quot;guestId&quot;
+                       required
+                &gt;
+                &lt;label class=&quot;mx-3&quot;&gt;{{ guest.last_name }} {{ guest.first_name }} {{ guest.middle_name }}&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-flex&quot;&gt;
+              &lt;div class=&quot;w-50 me-4&quot;&gt;
+                &lt;label class=&quot;my-3&quot;&gt;&lt;b&gt;Дата и время заезда&lt;/b&gt;&lt;/label&gt;
+                &lt;input type=&quot;date&quot;
+                       class=&quot;form-control&quot;
+                       :max=&quot;rangeEnd&quot; :min=&quot;rangeStart&quot;
+                       v-model=&quot;chosenStart.dateStart&quot;
+                       autocomplete=&quot;off&quot;
+                       required
+                &gt;
+                &lt;input type=&quot;time&quot;
+                       class=&quot;form-control my-4&quot;
+                       v-model=&quot;chosenStart.timeStart&quot;
+                       autocomplete=&quot;off&quot;
+                       required
+                &gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;w-50&quot;&gt;
+                &lt;label class=&quot;my-3&quot;&gt;&lt;b&gt;Дата и время выезда&lt;/b&gt;&lt;/label&gt;
+                &lt;input type=&quot;date&quot;
+                       class=&quot;form-control&quot;
+                       :max=&quot;rangeEnd&quot; :min=&quot;rangeStart&quot;
+                       v-model=&quot;chosenEnd.dateEnd&quot;
+                       autocomplete=&quot;off&quot;
+                       required
+                &gt;
+                &lt;input type=&quot;time&quot;
+                       class=&quot;form-control my-4&quot;
+                       v-model=&quot;chosenEnd.timeEnd&quot;
+                       autocomplete=&quot;off&quot;
+                       required
+                &gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-grid gap-2&quot;&gt;
+              &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block p-2 my-4 fw-semibold&quot;
+                      @click=&quot;$emit('close-modal')&quot;&gt;Заселить
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/transition&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+import {mapActions, mapState} from &quot;pinia&quot;;
+import useGuestsStore from &quot;@/stores/guests&quot;;
+import useRoomsStore from &quot;@/stores/rooms&quot;;
+import useUsersStore from &quot;@/stores/users&quot;;
+
+export default {
+  name: 'CheckIn',
+  props: {
+    room: {
+      roomId: {
+        type: Number
+      },
+      free_time: {
+        type: Array
+      }
+    }
+  },
+  data() {
+    return {
+      freeGuests: [],
+      guestId: null,
+      checkinGuest: null,
+      rangeStart: null,
+      rangeEnd: null,
+      chosenStart: {
+        dateStart: null,
+        timeStart: null,
+      },
+      chosenEnd: {
+        dateEnd: null,
+        timeEnd: null,
+      },
+      booking: {
+        guest: {},
+        check_in: null,
+        check_out: null,
+        room: null,
+        admin: null,
+      }
+    }
+  },
+  methods: {
+    ...mapActions(useGuestsStore, ['getGuestsList', &quot;getSelectedGuest&quot;, &quot;sendBooking&quot;]),
+    ...mapActions(useRoomsStore, ['loadFreeRooms']),
+    ...mapActions(useUsersStore, ['fetchUser']),
+    async getFreeGuests() {
+      let tmp = await this.getGuestsList()
+      this.freeGuests = JSON.parse(JSON.stringify(tmp.filter(guest =&gt; !guest.curr_booking)))
+    },
+    getFreeRoom() {
+      this.rangeStart = this.handleDate(this.room[1][0])
+      this.rangeEnd = this.handleDate(this.room[1][1])
+      this.booking.room = parseInt(this.room[0])
+    },
+    handleDate(timestamp) {
+      return (new Date(timestamp)).toISOString().substring(0, 10)
+    },
+    async sendForm() {
+      await this.buildData()
+      let data = JSON.parse(JSON.stringify(this.booking))
+      const res = await this.sendBooking(data, this.token)
+      window.location.reload()
+    },
+    async buildData() {
+      await this.defineGuest()
+      await this.defineAdmin()
+      this.booking.check_in = this.mergeDate(this.chosenStart.dateStart, this.chosenStart.timeStart)
+      this.booking.check_out = this.mergeDate(this.chosenEnd.dateEnd, this.chosenEnd.timeEnd)
+    },
+    async defineAdmin() {
+      const {id} = await this.fetchUser()
+      this.booking.admin = parseInt(id)
+    },
+    mergeDate(date, time) {
+      return `${date}T${time}Z`
+    },
+    async defineGuest() {
+      this.booking.guest = this.guestId
+    }
+  },
+  computed: {
+    ...mapState(useUsersStore, [&quot;token&quot;])
+  },
+  created() {
+    this.getFreeGuests()
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 35%;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.choice {
+  margin-left: 2px;
+  transform: scale(1.3);
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+&lt;/style&gt;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
